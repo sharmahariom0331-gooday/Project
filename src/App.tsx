@@ -604,6 +604,100 @@ const App: React.FC = () => {
               </div>
             </section>
 
+            {/* Collections Showcase */}
+            <section className="section-container">
+              <div className="center-title">
+                <h2 className="section-title">Collections & More</h2>
+                <p className="section-subtitle">Explore our curated collections for every occasion</p>
+              </div>
+              <div className="collections-showcase-grid">
+                <motion.div
+                  className="showcase-card large-card"
+                  whileHover={{ y: -8 }}
+                  onClick={() => handleCategoryClick('Wedding Collections')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600" alt="Wedding Collections" />
+                    <div className="showcase-overlay"></div>
+                  </div>
+                  <div className="showcase-content">
+                    <h3>Wedding Collections</h3>
+                    <p>Timeless pieces for your special day</p>
+                    <div className="cta-arrow"><MoveRight size={18} /></div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="showcase-card"
+                  whileHover={{ y: -8 }}
+                  onClick={() => handleCategoryClick('Heritage Classics')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1611085583191-a3b13b244821?q=80&w=400" alt="Heritage Classics" />
+                    <div className="showcase-overlay"></div>
+                  </div>
+                  <div className="showcase-content">
+                    <h3>Heritage Classics</h3>
+                    <p>Traditional designs</p>
+                    <div className="cta-arrow"><MoveRight size={18} /></div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="showcase-card"
+                  whileHover={{ y: -8 }}
+                  onClick={() => handleCategoryClick('Modern Minimalist')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=400" alt="Modern Minimalist" />
+                    <div className="showcase-overlay"></div>
+                  </div>
+                  <div className="showcase-content">
+                    <h3>Modern Minimalist</h3>
+                    <p>Contemporary elegance</p>
+                    <div className="cta-arrow"><MoveRight size={18} /></div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="showcase-card"
+                  whileHover={{ y: -8 }}
+                  onClick={() => handleCategoryClick('Gemstone Elegance')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=400" alt="Gemstone Elegance" />
+                    <div className="showcase-overlay"></div>
+                  </div>
+                  <div className="showcase-content">
+                    <h3>Gemstone Elegance</h3>
+                    <p>Precious stone jewelry</p>
+                    <div className="cta-arrow"><MoveRight size={18} /></div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="showcase-card large-card-bottom"
+                  whileHover={{ y: -8 }}
+                  onClick={() => handleCategoryClick('Festival Specials')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=600" alt="Festival Specials" />
+                    <div className="showcase-overlay"></div>
+                  </div>
+                  <div className="showcase-content">
+                    <h3>Festival Specials</h3>
+                    <p>Exclusive festive collection with stunning designs</p>
+                    <div className="cta-arrow"><MoveRight size={18} /></div>
+                  </div>
+                </motion.div>
+              </div>
+            </section>
+
             {/* Founder, Stats, etc. */}
             <section className="founder-profile">
               <div className="profile-image-section">
@@ -665,4 +759,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
