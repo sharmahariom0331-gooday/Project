@@ -1126,19 +1126,6 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
-  .collections-showcase-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-  }
-
-  .showcase-card.large-card {
-    grid-column: span 2;
-  }
-
-  .showcase-card.large-card-bottom {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1177,30 +1164,6 @@
   .gifting-grid-v2 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-  }
-
-  .collections-showcase-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 16px;
-    margin-bottom: 60px;
-  }
-
-  .showcase-card.large-card,
-  .showcase-card.large-card-bottom {
-    grid-column: span 1;
-  }
-
-  .showcase-card {
-    min-height: 240px;
-  }
-
-  .showcase-content h3 {
-    font-size: 20px;
-  }
-
-  .showcase-content p {
-    font-size: 12px;
   }
 
   .workshop-banner-v2 {
@@ -2140,113 +2103,6 @@
   font-weight: 800;
   font-size: 16px;
   color: #111;
-}
-
-/* Collections Showcase */
-.collections-showcase-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 280px 280px;
-  gap: 24px;
-  margin-bottom: 80px;
-}
-
-.showcase-card {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.showcase-card:hover {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-
-.showcase-img-wrapper {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.showcase-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.showcase-card:hover .showcase-img-wrapper img {
-  transform: scale(1.08);
-}
-
-.showcase-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(26, 2, 2, 0.3) 0%, rgba(26, 2, 2, 0.6) 100%);
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.showcase-card:hover .showcase-overlay {
-  background: linear-gradient(135deg, rgba(26, 2, 2, 0.4) 0%, rgba(26, 2, 2, 0.7) 100%);
-}
-
-.showcase-content {
-  position: relative;
-  z-index: 2;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  color: white;
-}
-
-.showcase-content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: white;
-  letter-spacing: -0.5px;
-}
-
-.showcase-content p {
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.cta-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.showcase-card:hover .cta-arrow {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateX(4px);
-}
-
-.showcase-card.large-card {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.showcase-card.large-card-bottom {
-  grid-column: span 2;
-  grid-row: span 1;
 }
 
 @media (max-width: 1200px) {
