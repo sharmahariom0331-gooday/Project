@@ -634,18 +634,62 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            {/* Founder, Stats, etc. */}
-            <section className="founder-profile">
-              <div className="profile-image-section">
-                <div className="rotating-circle-container">
-                  <div className="rotating-border"><div className="rotating-dot"></div></div>
-                  <div className="profile-img-box"><img src="https://images.unsplash.com/photo-1567532939604-b6c5b0adcc2c?q=80&w=400" alt="Founder" /></div>
-                </div>
+            {/* Akshima Experience */}
+            <section className="section-container experience-section">
+              <div className="center-title">
+                <h2 className="section-title">Akshima Experience</h2>
+                <p className="section-subtitle">Find a Boutique or Book a Consultation</p>
               </div>
-              <h2 className="founder-name">{settings.founderName}</h2><p className="founder-vision">FOUNDER & VISIONARY</p>
-              <div className="quote-container-v2"><span className="quote-mark">"</span><p className="quote-text-v2">"Jewellery is more than just an ornament..."</p></div>
-              <div className="story-text-v2"><p>Founded with a singular vision to redefine luxury...</p></div>
-              <div className="stats-row-v2"><div className="stat-chip"><h3>{settings.heritageYears}</h3><p>YEARS OF HERITAGE</p></div><div className="stat-chip"><h3>100%</h3><p>{settings.purityPromise}</p></div></div>
+              <div className="experience-grid-v2">
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Visit Store')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500" alt="Visit Our Store" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">VISIT OUR STORE</div>
+                </motion.div>
+
+                <motion.div className="experience-card center-card" whileHover={{ y: -8 }}>
+                  <div className="experience-img-box">
+                    <div className="appointment-box">
+                      <Calendar size={40} color="#C5A059" />
+                      <span>BOOK AN APPOINTMENT</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Expert Consultation')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1599643477877-537ef527848b?q=80&w=500" alt="Talk to an Expert" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">TALK TO AN EXPERT</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Digi Gold')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1611085583191-a3b13b244821?q=80&w=500" alt="Digi Gold" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">DIGI GOLD</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Blogs')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=500" alt="Blogs" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">BLOGS</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Jewellery Guide')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=500" alt="Jewellery Guide" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">JEWELLERY GUIDE</div>
+                </motion.div>
+              </div>
             </section>
           </motion.div>
         )}
