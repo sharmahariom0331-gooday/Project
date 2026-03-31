@@ -604,18 +604,92 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            {/* Founder, Stats, etc. */}
-            <section className="founder-profile">
-              <div className="profile-image-section">
-                <div className="rotating-circle-container">
-                  <div className="rotating-border"><div className="rotating-dot"></div></div>
-                  <div className="profile-img-box"><img src="https://images.unsplash.com/photo-1567532939604-b6c5b0adcc2c?q=80&w=400" alt="Founder" /></div>
+            {/* About Us Section */}
+            <section className="section-container about-us-section">
+              <div className="about-us-wrapper">
+                <div className="about-us-image">
+                  <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=600" alt="Akshima Family" />
+                </div>
+                <div className="about-us-content">
+                  <div className="about-us-header">
+                    <span className="about-label">NOTE BY FOUNDER</span>
+                    <h2 className="about-us-title">ABOUT US – अक्षिमा ज्वेलर्स</h2>
+                  </div>
+                  <div className="about-us-text">
+                    <p>
+                      Akshima Jewellers (अक्षिमा ज्वेलर्स) is a trusted ethnic & fashion jewellery brand in Rohtak. We offer a premium collection of designer sarees, suits, kurta, bridal lehenga-churn, western dresses, and men's traditional wear.
+                    </p>
+                    <p>
+                      Located at Railway Road, Rohtak, we are known for quality fabrics, latest designs, perfect fitting, and affordable pricing. From everyday ethnic wear to bridal and festive outfits, we bring style that matches tradition and modern trends.
+                    </p>
+                    <p>
+                      We also provide delivery services and personalized assistance to help you find the perfect look for every occasion. Visit us today and experience fashion with trust and elegance.
+                    </p>
+                  </div>
+                  <div className="about-us-signature">
+                    <p className="signature-name">अक्षिमा ज्वेलर्स</p>
+                    <p className="signature-title">- अक्षिमा प्रबंधन</p>
+                  </div>
                 </div>
               </div>
-              <h2 className="founder-name">{settings.founderName}</h2><p className="founder-vision">FOUNDER & VISIONARY</p>
-              <div className="quote-container-v2"><span className="quote-mark">"</span><p className="quote-text-v2">"Jewellery is more than just an ornament..."</p></div>
-              <div className="story-text-v2"><p>Founded with a singular vision to redefine luxury...</p></div>
-              <div className="stats-row-v2"><div className="stat-chip"><h3>{settings.heritageYears}</h3><p>YEARS OF HERITAGE</p></div><div className="stat-chip"><h3>100%</h3><p>{settings.purityPromise}</p></div></div>
+            </section>
+
+            {/* Akshima Experience */}
+            <section className="section-container experience-section">
+              <div className="center-title">
+                <h2 className="section-title">Akshima Experience</h2>
+                <p className="section-subtitle">Find a Boutique or Book a Consultation</p>
+              </div>
+              <div className="experience-grid-v2">
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Visit Store')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500" alt="Visit Our Store" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">VISIT OUR STORE</div>
+                </motion.div>
+
+                <motion.div className="experience-card center-card" whileHover={{ y: -8 }}>
+                  <div className="experience-img-box">
+                    <div className="appointment-box">
+                      <Calendar size={40} color="#C5A059" />
+                      <span>BOOK AN APPOINTMENT</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Expert Consultation')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1599643477877-537ef527848b?q=80&w=500" alt="Talk to an Expert" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">TALK TO AN EXPERT</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Digi Gold')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1611085583191-a3b13b244821?q=80&w=500" alt="Digi Gold" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">DIGI GOLD</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Blogs')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=500" alt="Blogs" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">BLOGS</div>
+                </motion.div>
+
+                <motion.div className="experience-card" whileHover={{ y: -8 }} onClick={() => handleCategoryClick('Jewellery Guide')} style={{ cursor: 'pointer' }}>
+                  <div className="experience-img-box">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=500" alt="Jewellery Guide" />
+                    <div className="experience-overlay"></div>
+                  </div>
+                  <div className="experience-label">JEWELLERY GUIDE</div>
+                </motion.div>
+              </div>
             </section>
           </motion.div>
         )}
@@ -638,25 +712,86 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-main">
-          <div className="footer-brand"><h2 className="brand-logo">{settings.siteName}</h2><p className="since">Since 1964</p></div>
-          <div className="footer-cols">
+        <div className="footer-container">
+          {/* Left: Brand & Advantages */}
+          <div className="footer-left">
+            <div className="footer-brand">
+              <h3 className="brand-logo">{settings.siteName} <span className="logo-circle">O</span></h3>
+              <p className="brand-subtitle">JEWELLERS</p>
+              <p className="since">Since 1964</p>
+            </div>
+            <div className="advantages-column">
+              <h4>Akshima Advantages</h4>
+              <ul>
+                <li><Gem size={16} /> BIS Hallmark Jewellery</li>
+                <li><Truck size={16} /> Free Shipping & Delivery</li>
+                <li><ShieldCheck size={16} /> Certified Diamonds</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Center: Links */}
+          <div className="footer-middle">
             <div className="footer-col">
               <h4>About Akshima</h4>
-              <ul><li onClick={handleBackToHome} style={{ cursor: 'pointer' }}>Home</li><li>Contact Us</li><li>Store Locator</li></ul>
+              <ul>
+                <li onClick={handleBackToHome} style={{ cursor: 'pointer' }}>About Us</li>
+                <li>Contact Us</li>
+                <li>Store Locator</li>
+              </ul>
             </div>
             <div className="footer-col">
-              <h4>Support</h4>
-              <ul><li>Enquiry Form</li><li>Returns</li><li>Policies</li></ul>
+              <h4>Customer Support</h4>
+              <ul>
+                <li>Enquiry Form</li>
+                <li>Cancellation and Returns</li>
+                <li>Delivery Information</li>
+                <li>Store Policies</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Right: Contact & Social */}
+          <div className="footer-right">
+            <h4>Contact Us</h4>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-label">FAQ</span>
+              </div>
+              <div className="contact-item">
+                <Phone size={14} />
+                <a href={`tel:${settings.contactNumber.replace(/[^\d]/g, '')}`}>{settings.contactNumber}</a>
+              </div>
+              <div className="contact-item">
+                <Mail size={14} />
+                <a href="mailto:cs@akshima.com">cs@akshima.com</a>
+              </div>
+              <p className="contact-hours">9 am - 10 pm, 7 days a week</p>
+            </div>
+            <div className="social-links">
+              <h5>Social</h5>
+              <div className="social-icons">
+                <a href="#" aria-label="Facebook"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Twitter"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="YouTube"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Instagram"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Pinterest"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="LinkedIn"><div className="social-icon"><Gem size={16} /></div></a>
+              </div>
             </div>
           </div>
         </div>
-        <div className="footer-bars">
-          <div className="bar contact-bar">
-            <span>Contact Us</span><div className="items"><a href={`tel:${settings.contactNumber.replace(/[^\d]/g, '')}`}><Phone size={14} /> {settings.contactNumber}</a></div>
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <div className="language-selector">
+            <span>🇮🇳</span>
+            <span>🇬🇧</span>
+            <span>🇪🇸</span>
           </div>
-          <div className="bar copyright-bar">
-            <p>&copy; 2026 {settings.siteName} Jewellers India Private Limited. <span onClick={() => setView('admin')} style={{cursor: 'pointer', opacity: 0.5, marginLeft: '10px'}}>Admin Panel</span></p>
+          <p className="copyright">&copy; 2026 Akshima Jewellers India Private Limited. All Rights Reserved</p>
+          <div className="admin-link">
+            <span onClick={() => setView('admin')} style={{cursor: 'pointer', opacity: 0.6}}><Gem size={14} /></span>
           </div>
         </div>
       </footer>
@@ -665,4 +800,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
