@@ -604,6 +604,36 @@ const App: React.FC = () => {
               </div>
             </section>
 
+            {/* About Us Section */}
+            <section className="section-container about-us-section">
+              <div className="about-us-wrapper">
+                <div className="about-us-image">
+                  <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=600" alt="Akshima Family" />
+                </div>
+                <div className="about-us-content">
+                  <div className="about-us-header">
+                    <span className="about-label">NOTE BY FOUNDER</span>
+                    <h2 className="about-us-title">ABOUT US – अक्षिमा ज्वेलर्स</h2>
+                  </div>
+                  <div className="about-us-text">
+                    <p>
+                      Akshima Jewellers (अक्षिमा ज्वेलर्स) is a trusted ethnic & fashion jewellery brand in Rohtak. We offer a premium collection of designer sarees, suits, kurta, bridal lehenga-churn, western dresses, and men's traditional wear.
+                    </p>
+                    <p>
+                      Located at Railway Road, Rohtak, we are known for quality fabrics, latest designs, perfect fitting, and affordable pricing. From everyday ethnic wear to bridal and festive outfits, we bring style that matches tradition and modern trends.
+                    </p>
+                    <p>
+                      We also provide delivery services and personalized assistance to help you find the perfect look for every occasion. Visit us today and experience fashion with trust and elegance.
+                    </p>
+                  </div>
+                  <div className="about-us-signature">
+                    <p className="signature-name">अक्षिमा ज्वेलर्स</p>
+                    <p className="signature-title">- अक्षिमा प्रबंधन</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             {/* Founder, Stats, etc. */}
             <section className="founder-profile">
               <div className="profile-image-section">
@@ -638,25 +668,86 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-main">
-          <div className="footer-brand"><h2 className="brand-logo">{settings.siteName}</h2><p className="since">Since 1964</p></div>
-          <div className="footer-cols">
+        <div className="footer-container">
+          {/* Left: Brand & Advantages */}
+          <div className="footer-left">
+            <div className="footer-brand">
+              <h3 className="brand-logo">{settings.siteName} <span className="logo-circle">O</span></h3>
+              <p className="brand-subtitle">JEWELLERS</p>
+              <p className="since">Since 1964</p>
+            </div>
+            <div className="advantages-column">
+              <h4>Akshima Advantages</h4>
+              <ul>
+                <li><Gem size={16} /> BIS Hallmark Jewellery</li>
+                <li><Truck size={16} /> Free Shipping & Delivery</li>
+                <li><ShieldCheck size={16} /> Certified Diamonds</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Center: Links */}
+          <div className="footer-middle">
             <div className="footer-col">
               <h4>About Akshima</h4>
-              <ul><li onClick={handleBackToHome} style={{ cursor: 'pointer' }}>Home</li><li>Contact Us</li><li>Store Locator</li></ul>
+              <ul>
+                <li onClick={handleBackToHome} style={{ cursor: 'pointer' }}>About Us</li>
+                <li>Contact Us</li>
+                <li>Store Locator</li>
+              </ul>
             </div>
             <div className="footer-col">
-              <h4>Support</h4>
-              <ul><li>Enquiry Form</li><li>Returns</li><li>Policies</li></ul>
+              <h4>Customer Support</h4>
+              <ul>
+                <li>Enquiry Form</li>
+                <li>Cancellation and Returns</li>
+                <li>Delivery Information</li>
+                <li>Store Policies</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Right: Contact & Social */}
+          <div className="footer-right">
+            <h4>Contact Us</h4>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-label">FAQ</span>
+              </div>
+              <div className="contact-item">
+                <Phone size={14} />
+                <a href={`tel:${settings.contactNumber.replace(/[^\d]/g, '')}`}>{settings.contactNumber}</a>
+              </div>
+              <div className="contact-item">
+                <Mail size={14} />
+                <a href="mailto:cs@akshima.com">cs@akshima.com</a>
+              </div>
+              <p className="contact-hours">9 am - 10 pm, 7 days a week</p>
+            </div>
+            <div className="social-links">
+              <h5>Social</h5>
+              <div className="social-icons">
+                <a href="#" aria-label="Facebook"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Twitter"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="YouTube"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Instagram"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="Pinterest"><div className="social-icon"><Gem size={16} /></div></a>
+                <a href="#" aria-label="LinkedIn"><div className="social-icon"><Gem size={16} /></div></a>
+              </div>
             </div>
           </div>
         </div>
-        <div className="footer-bars">
-          <div className="bar contact-bar">
-            <span>Contact Us</span><div className="items"><a href={`tel:${settings.contactNumber.replace(/[^\d]/g, '')}`}><Phone size={14} /> {settings.contactNumber}</a></div>
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <div className="language-selector">
+            <span>🇮🇳</span>
+            <span>🇬🇧</span>
+            <span>🇪🇸</span>
           </div>
-          <div className="bar copyright-bar">
-            <p>&copy; 2026 {settings.siteName} Jewellers India Private Limited. <span onClick={() => setView('admin')} style={{cursor: 'pointer', opacity: 0.5, marginLeft: '10px'}}>Admin Panel</span></p>
+          <p className="copyright">&copy; 2026 Akshima Jewellers India Private Limited. All Rights Reserved</p>
+          <div className="admin-link">
+            <span onClick={() => setView('admin')} style={{cursor: 'pointer', opacity: 0.6}}><Gem size={14} /></span>
           </div>
         </div>
       </footer>
